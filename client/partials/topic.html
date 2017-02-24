@@ -1,0 +1,15 @@
+<div>
+  <a href="#!/user/{{topic.user._id}}" ng-bind="topic.user.name"></a> posted a topic:
+  <h4 ng-bind="topic.name"></h4>
+  <span>Description: </span> <span ng-bind="topic.description"></span>
+</div>
+
+<div>
+  <form ng-submit="savePost()">
+    <fieldset>
+      <legend>post your answer here</legend>
+      <input type="textarea" cols="42" placeholder="enter your answer..." ng-model="post.text">
+      <input type="submit" value="post">
+    </fieldset>
+  </form>
+</div>

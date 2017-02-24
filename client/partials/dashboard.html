@@ -1,0 +1,36 @@
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Topic</th>
+    <th>User Name</th>
+    <th>Posts</th>
+  </tr>
+
+  <tr ng-repeat="topic in topics">
+    <td ng-bind="topic.category">Ruby</td>
+    <td ><button ng-click="visitTopic(topic)" ng-bind="topic.name"></button></td>
+    <td> <button ng-click="visitUser(topic.user)" ng-bind="topic.user.name"></button></td>
+    <td ng-bind="topic.posts.length"></td>
+  </tr>
+</table>
+
+<!-- <script>
+  $scope.categories = ['trees', 'dogs', 'lulz', 'diablo', 'marcus'];
+  $scope.topic.category = categories[0];
+</script> -->
+<form ng-submit = "addTopic()">
+  <fieldset>
+    <legend>Add a new topic</legend>
+    <input type="hidden" ng-model="topic.user" value="{{user}}">
+  Topic: <input type="text" placeholder="enter topic name..." ng-model = "topic.name">
+  Description: <input type="textarea" placeholder="enter topic description..." ng-model="topic.description">
+  Category: <select ng-model = "topic.category"  ng-options="category for category in categories">
+              <!-- <option selected="true" value="Ruby">Ruby</option>
+              <option value="cats">cats</option>
+              <option value="dogs">dogs</option>
+              <option value="lizards">lizards</option>
+              <option value="jewels">jewels</option> -->
+            </select>
+<input type="submit" value="Submit!">
+  </fieldset>
+</form>

@@ -1,0 +1,76 @@
+*{
+  text-align: center !important;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;}
+tr:nth-child(even) { background-color: #dddddd;}
+
+.box{
+ border: 1px solid silver;
+}
+
+
+button{
+ background-color: #0472e0 ;
+ color: white;
+ width: 80%;
+}
+
+.submit{
+ background-color: #559ee8 ;
+}
+input{
+ width: auto !important;
+}
+a{
+ font-size: 1.2em;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+ color:          red !important;
+ opacity:        1 !important;
+}
+.inline-block{
+ display:        inline-block;
+ }
+.wrapper{
+ height:         100%;
+ width:          100%;
+ position:       absolute;
+ }
+form{
+ vertical-align: top;
+ }
+.addbox{
+ position:       fixed;
+ left:           0 !important;
+ width:          42%;
+ margin:         10px
+}
+.listbox{
+ position:       fixed;
+ right:          0 !important;
+ width:          42%;
+ margin:         10px;
+}
+th{
+ text-align:     center !important;
+}
+td{
+ text-align:     center !important;
+}
+.ng-binding{
+ text-align:     center !important;
+}
+textarea{
+ overflow:       scroll;
+}
+h1{
+ color:          #004D43 ;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>Belt Review</title>
+    <link rel="stylesheet" href="assets/styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script>
+          $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script> -->
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="assets/app.js"></script>
+
+    <script src="assets/factories/userfactory.js"></script>
+    <script src="assets/factories/topicfactory.js"></script>
+    <script src="assets/factories/postfactory.js"></script>
+
+    <script src="assets/controllers/usercontroller.js"></script>
+    <script src="assets/controllers/dashboardcontroller.js"></script>
+    <script src="assets/controllers/topiccontroller.js"></script>
+    <script src="assets/controllers/indexcontroller.js"></script>
+
+  </head>
+  <body ng-controller="indexcontroller">
+    <header>
+      <h1>Hello <span ng-bind="user.name"></span></h1>
+      <hr>
+      <a href="#!/">Login</a> | <a href="#!/dashboard">Dashboard</a> 
+    </header>
+
+    <hr>
+    <div ng-view= "">
+    </div>
+  </body>
+</html>
